@@ -1,20 +1,22 @@
 ﻿<!DOCTYPE html>
 <html lang="en" ng-app="scc">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="">
-  <meta name="author" content="Dharmesh Pipariya">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>Sass Color Calculator | A Tool for Dynamaically Visualizing SASS HSL Color Calculator</title>
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="A Tool for Dynamaically Visualizing SASS HSL Color Calculator">
+    <meta name="author" content="Dharmesh Pipariya">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name=" theme-color" content="#00f">
+    <title>Sass Color Calculator | A Tool for Dynamaically Visualizing SASS HSL Color Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header flex">
@@ -32,7 +34,7 @@
         <div style="color:{{scc.colorA}};background:{{scc.colorA}};">
           <input type="text" name="input" ng-model="scc.colorA" ng-model-options="{ getterSetter: true }">
         </div>
-        <div style="background:{{scc.colorB}};">
+        <div style="color:{{scc.colorB}};background:{{scc.colorB}};">
           <input type="text" name="output" ng-model="scc.colorB" ng-model-options="{ getterSetter: true }">
         </div>
       </div>

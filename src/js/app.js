@@ -1,8 +1,8 @@
 angular.module('scc', [])
   .controller('SccController', ['$scope', function ($scope) {
     $scope.scc = {
-      colorA: '#3f51b5',
-      colorB: '#344397',
+      colorA: '#0000ff',
+      colorB: '#0000cc',
       colorDiff: function (a, b) {
         var a = tinycolor(a).toHsl(),
           b = tinycolor(b).toHsl(),

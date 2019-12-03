@@ -1,6 +1,6 @@
 $white: white !default;
 $black: black !default;
-$primary: #3f51b5 !default;
+$primary: #0000ff !default;
 
 .red {
   color: red;
@@ -71,6 +71,10 @@ body {
   text-align: center;
   color: lighten($black, 46);
   background: lighten($black, 20);
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 
 .section {
@@ -78,35 +82,39 @@ body {
 }
 
 .colours-container {
+  display: flex;
   margin: -16px -16px 16px;
-
-  &::before, &::after {
-    display: table;
-    content: '';
-  }
-
-  &::after {
-    clear: both;
-  }
 
   > div {
     position: relative;
     width: 50%;
     padding: 100px 0;
-    float: left;
     text-align: center;
     color: $white;
 
     &:first-child::after {
       position: absolute;
       top: 0;
-      right: -40px;
+      right: -20px;
       width: 0;
       height: 0;
       border-top: 0;
       border-bottom: 244px solid transparent;
       border-left: 40px solid currentColor;
       z-index: 10;
+      content: '';
+    }
+
+    &:last-child::after {
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border-top: 244px solid transparent;
+      border-right: 40px solid currentColor;
+      border-bottom: 0;
+      z-index: 11;
       content: '';
     }
 
@@ -135,6 +143,22 @@ body {
 
       &:focus {
         outline: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      padding: 50px 0;
+
+      &:first-child::after {
+        right: -10px;
+        border-bottom: 144px solid transparent;
+        border-left: 20px solid currentColor;
+      }
+
+      &:last-child::after {
+        left: -10px;
+        border-top: 144px solid transparent;
+        border-right: 20px solid currentColor;
       }
     }
   }
